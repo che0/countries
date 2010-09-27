@@ -8,8 +8,8 @@ The tools are:
  2) run python
       import copyshapes
       copyshapes.filter_file(
-            lambda x: x.GetField('ISO2') == 'CZ',
-            'TM_WORLD_BORDERS-0.3.shp', 'cz.shp'
+            lambda x: x.GetField('REGION') == 150,
+            'TM_WORLD_BORDERS-0.3.shp', 'EUROPE.shp'
       )
 
  -- countries.py
