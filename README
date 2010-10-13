@@ -17,4 +17,4 @@ The tools are:
  Example:
      import countries
      cc = countries.CountryChecker('TM_WORLD_BORDERS-0.3.shp')
-     cc.getCountry(0328.7708, 4940.9321)
+     print cc.getCountry(countries.Point(49.7821, 3.5708)).iso

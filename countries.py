@@ -38,13 +38,6 @@ class CountryChecker(object):
         driver = ogr.GetDriverByName('ESRI Shapefile')
         self.countryFile = driver.Open(country_file)
         self.layer = self.countryFile.GetLayer()
-        
-        self.allCountries = ogr.Geometry(ogr.wkbMultiPolygon)
-        self.allCountries.Empty()
-        for i in xrange(self.layer.GetFeatureCount()):
-            country = self.layer.GetFeature(i)
-            print 'adding %s' % country.GetField('NAME')
-            self.allCountries = self.allCountries.Union(country.geometry())
     
     def getCountry(self, point):
         """
@@ -59,7 +52,3 @@ class CountryChecker(object):
         
         # nothing found
         return None
-    
-    def inSomeCountry(self, point):
-        """ Checks whether given point is in any country. """
-        return self.allCountries.Contains(point.ogr)
