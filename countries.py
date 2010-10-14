@@ -10,8 +10,6 @@ class Point(object):
         self.point = ogr.Geometry(ogr.wkbPoint)
         self.point.AddPoint(lng, lat)
     
-    
-    
     def getOgr(self):
         return self.point
     ogr = property(getOgr)
