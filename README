@@ -18,3 +18,8 @@ The tools are:
      import countries
      cc = countries.CountryChecker('TM_WORLD_BORDERS-0.3.shp')
      print cc.getCountry(countries.Point(49.7821, 3.5708)).iso
+
+
+LICENSE:
+
+This code is in public domain.
