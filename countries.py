@@ -43,7 +43,7 @@ class CountryChecker(object):
         Output is either country shape index or None
         """
         
-        for i in xrange(self.layer.GetFeatureCount()):
+        for i in range(self.layer.GetFeatureCount()):
             country = self.layer.GetFeature(i)
             if country.geometry().Contains(point.ogr):
                 return Country(country)
